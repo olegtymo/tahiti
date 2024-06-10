@@ -2,7 +2,7 @@
 $experience_title_bold = get_field( 'experience_title_bold' );
 $discover_title        = get_field( 'discover_title' );
 $experience_subtitle   = get_field( 'experience_subtitle' );
-$experience_text       = get_field( 'experience_text' );
+$experience_text       = get_field( 'experience_text',false,false );
 $experience_btn        = get_field( 'experience_button' );
 $experience_bg_img     = get_field( 'experience_background_image' );
 $experience_btn_title  = $experience_btn['title'];
@@ -20,15 +20,15 @@ $experience_btn_link   = $experience_btn['url'];
                 <div class="experience__upper-wrapper col-12">
                     <h2 class="experience__title">
 						<?php if ( $experience_title_bold ): ?>
-                            <span><?php the_field( 'experience_title_bold' ) ?></span>
+                            <span><?php echo $experience_title_bold; ?></span>
 						<?php endif; ?>
 
-						<?php the_field( 'discover_title' ) ?>
+						<?php echo $discover_title; ?>
 
                     </h2>
 
 					<?php if ( $experience_subtitle ): ?>
-                        <p class="experience__subtitle"><?php the_field( 'experience_subtitle' ) ?></p>
+                        <p class="experience__subtitle"><?php echo $experience_subtitle ?></p>
 					<?php endif; ?>
                 </div>
 			<?php endif; ?>

@@ -54,6 +54,8 @@
             e.classList.remove('active');
         }),
             l.forEach((e) => {
+                console.log("T:" + t)
+                console.log(e.dataset.info)
                 e.dataset.info === t && (e.classList.add('active'), (o = e));
             });
     }),
